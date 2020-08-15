@@ -1,0 +1,7 @@
+.DS_Store
+dist/
+.eggs/
+tfnlp.egg-info/
+*.pyc
+*.py~
+build/
