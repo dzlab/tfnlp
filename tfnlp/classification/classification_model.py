@@ -16,13 +16,14 @@ from official.nlp.bert import configs as bert_configs
 from official.nlp import optimization
 from official.utils.misc import distribution_utils
 
+from tfnlp.processing import FileProcessor, DataFrameProcessor
+
 class ClassificationModel:
   def __init__(self, strategy, bert_config, bert_classifier, tokenizer, train_args):
     self.strategy = strategy
     self.bert_config = bert_config
     self.bert_classifier = bert_classifier
     self.tokenizer = tokenizer
-    self.encode = Encoder(tokenizer)
     self.train_args = train_args
 
   def train(self, data_path=None, train_df=None, valid_df=None):
