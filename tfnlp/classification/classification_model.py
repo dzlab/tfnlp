@@ -16,7 +16,7 @@ from official.nlp.bert import configs as bert_configs
 from official.nlp import optimization
 from official.utils.misc import distribution_utils
 
-from tfnlp.processing import FileProcessor, DataFrameProcessor
+from tfnlp.utils import FileProcessor, DataFrameProcessor
 
 class ClassificationModel:
   def __init__(self, strategy, bert_config, bert_classifier, tokenizer, train_args):
